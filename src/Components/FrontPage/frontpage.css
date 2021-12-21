@@ -1,0 +1,9 @@
+.front-page{
+    margin-top: 3rem;
+    height: 100vh;
+    display: flex;
+}
+
+.description{
+    padding: 5rem;
+}
