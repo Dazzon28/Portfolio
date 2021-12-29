@@ -6,9 +6,8 @@ const Cards = ()=>{
     return(
     <div className="cards-container">
         <CardGroup>
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
+        <SingleCard title="Personal projects" text="See list of my personal projects"/>
+        <SingleCard title="Personal Skills" text="See list of my personal skills"/>
         </CardGroup>
         
     </div>

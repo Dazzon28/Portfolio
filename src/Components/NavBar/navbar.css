@@ -1,0 +1,11 @@
+.nav-link{
+    transition: 1s;
+    border-radius: 10px;
+    margin: auto 1rem;
+}
+.nav-link:hover{
+    transition: 0.4s;
+    background-color: #344CB7;
+    color: #fff!important;
+    
+}
