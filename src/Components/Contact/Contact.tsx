@@ -1,7 +1,9 @@
-import { Button, Modal } from "react-bootstrap"
+import { Button, ListGroup, Modal } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { setContactView } from "../../Redux/Slices/viewContacts"
 import { RootState } from "../../Redux/store"
+import {AiOutlineMail,AiOutlinePhone} from "react-icons/ai"
+import CustomListItem from "../CustomListItem/CustomListItem"
 const Contacts = () => {
     const dispatch = useDispatch()
     const viewContacts = useSelector((state:RootState)=>state.viewContacts)
@@ -18,12 +20,10 @@ const Contacts = () => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h4>Centered Modal</h4>
-                <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.
-                </p>
+                <ListGroup>
+                    <CustomListItem icon={<AiOutlineMail/>} content="barreyrodawson@gmail.com" />
+                    <CustomListItem icon={<AiOutlinePhone/>} content="+39 3245367174" />
+                </ListGroup>
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={()=>dispatch(setContactView(false))}>Close</Button>
