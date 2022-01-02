@@ -1,6 +1,6 @@
 .nav-link{
     transition: 1s;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto 1rem;
 }
 .nav-link:hover{

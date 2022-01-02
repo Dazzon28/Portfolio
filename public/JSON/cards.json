@@ -1,0 +1,26 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "title": "Technical Skills",
+            "content": [
+                "HTML",
+                "JavaScript",
+                "Typescript",
+                "GitHub",
+                "React",
+                "Java SpringBoot"
+            ]
+        },
+        {
+            "id": 0,
+            "title": "Other Skills",
+            "content": [
+                "Team Work",
+                "Problem Solving",
+                "Communication",
+                "Time Management"
+            ]
+        }
+    ]
+}

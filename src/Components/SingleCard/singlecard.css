@@ -1,5 +1,32 @@
 .card{
     width: 500px;
-    height: 500px;
+    height: 350;
     margin: 0 6rem 16rem;
+    border-radius: 10px!important;
+    box-shadow: 10px 10px 10px rgb(196, 196, 196);
+}
+.card-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+}
+.icon{
+    height: 70px;
+    width: 70px;
+}
+#gear{
+    animation:spinner 4s linear infinite;
+}
+#skill{
+    transition: 0.5s;
+    transform:scale(1)
+}
+#skill:hover{
+    transition: 0.5s;
+    transform:scale(1.2)
+}
+@keyframes spinner{
+    to{transform:rotate( 360deg);}
 }

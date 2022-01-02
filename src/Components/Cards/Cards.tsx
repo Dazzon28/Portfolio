@@ -1,13 +1,46 @@
 import "./cards.css"
 import SingleCard from "../SingleCard/SingleCard";
-import { CardGroup } from "react-bootstrap";
+import { useEffect, useRef, useState } from "react";
+import { card } from "../../interfaces/interfaces";
 
-const Cards = ()=>{
-    return(
-    <div className="cards-container">
-        <SingleCard title="Personal projects" text="See list of my personal projects"/>
-        <SingleCard title="Personal Skills" text="See list of my personal skills"/>
-    </div>
+const Cards = () => {
+    const firstUpdate = useRef(true);
+    const [cardsList, setCardsList] = useState<card[]>([
+        {
+            id: 0,
+            title: "",
+            content: [""]
+        }
+    ])
+    const [isLoading, setIsLoading] = useState(false);
+    const getCards = async () => {
+        const response = await fetch("JSON/cards.json", {
+            method: "GET"
+        })
+        if (response.ok) {
+            const data = await response.json();
+            setCardsList(data.cards)
+        }
+
+
+    }
+    useEffect(() => {
+        getCards();
+    }, [])
+    useEffect(() => {
+        if (firstUpdate.current) {
+            firstUpdate.current = false;
+            return;
+        }
+        setIsLoading(true)
+    }, [cardsList])
+    return (
+        <div className="cards-container">
+            {isLoading &&
+                cardsList.map(card => <SingleCard key={card.id} card={card} />)
+            }
+
+        </div>
     )
 }
 

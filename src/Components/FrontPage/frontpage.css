@@ -1,9 +1,26 @@
 .front-page{
-    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
     height: 100vh;
     display: flex;
 }
-
 .description{
-    padding: 5rem;
+    padding: 18rem 6rem;
+    color: #fff;
+}
+.description h1,.description h2{
+    font-size: 3rem;
+}
+.description, .img-div{
+    min-width: 50vw;
+    min-height: 100vh;
+}
+.img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-div img{
+    width: 700px;
+    height: 700px;
 }

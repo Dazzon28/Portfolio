@@ -4,12 +4,26 @@ import { setContactView } from "../../Redux/Slices/viewContacts"
 import { RootState } from "../../Redux/store"
 import {AiOutlineMail,AiOutlinePhone} from "react-icons/ai"
 import CustomListItem from "../CustomListItem/CustomListItem"
+import { useEffect, useRef } from "react"
 const Contacts = () => {
     const dispatch = useDispatch()
+    const ref = useRef<HTMLDivElement>(null)
     const viewContacts = useSelector((state:RootState)=>state.viewContacts)
+    useEffect(()=>{
+        const handleClickOutside = (event: Event) => {
+            if (ref.current && !ref.current.contains(event.target as Node)) {
+                handleClose()
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+    },[])
+    const handleClose = ()=>{
+        dispatch(setContactView(false))
+    }
     return (
-        <Modal
+        <Modal ref={ref}
             show={viewContacts}
+            onHide={handleClose}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
@@ -26,7 +40,7 @@ const Contacts = () => {
                 </ListGroup>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={()=>dispatch(setContactView(false))}>Close</Button>
+                <Button onClick={()=>handleClose()}>Close</Button>
             </Modal.Footer>
         </Modal>
     )

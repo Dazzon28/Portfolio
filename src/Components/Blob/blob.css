@@ -1,0 +1,17 @@
+.blob{
+    width: 700px;
+    height: 700px;
+    background-color: #344CB7;
+    animation: wave 8s ease-in-out infinite;
+    z-index: -1;
+    position: absolute;
+    margin: 4rem 1.5rem;
+}
+@keyframes wave {
+    0%, 100% {
+        border-radius: 66% 34% 37% 63% / 57% 31% 69% 43%;
+    }
+    50%{
+        border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
+    }
+}
