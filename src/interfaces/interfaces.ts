@@ -3,3 +3,11 @@ export interface card {
     title:string,
     content:string[]
 }
+
+export interface project{
+    id:number,
+    picture:string,
+    title:string,
+    link:string,
+    description:string
+}

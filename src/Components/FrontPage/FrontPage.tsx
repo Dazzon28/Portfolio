@@ -10,9 +10,6 @@ const FrontPage = ()=>{
             <div className ="img-div">
                 <img src="illustration.png" alt="" />
             </div>
-            <div>
-            
-            </div>
         </div>
     )
 }

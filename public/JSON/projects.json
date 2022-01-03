@@ -2,8 +2,24 @@
     "projects":[
         {
             "id":0,
-            "link":"",
-            "description":""
+            "picture":"img/simon.png",
+            "title":"Simon Game",
+            "link":"https://github.com/Dazzon28/Simon-Game",
+            "description":"Javascript Simon game"
+        },
+        {
+            "id":1,
+            "picture":"img/dicee.png",
+            "title":"Dicee Game",
+            "link":"https://github.com/Dazzon28/Dicee-Game",
+            "description":"Javascript Dicee game"
+        },
+        {
+            "id":2,
+            "picture":"img/drum.png",
+            "title":"Drum Kit Game",
+            "link":"https://github.com/Dazzon28/Drum-Kit",
+            "description":"Javascript Drum Kit game"
         }
     ]
 }

@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    display: flex;
 }
 .description{
     padding: 18rem 6rem;
@@ -12,7 +11,7 @@
     font-size: 3rem;
 }
 .description, .img-div{
-    min-width: 50vw;
+    min-width: 50%;
     min-height: 100vh;
 }
 .img-div{
